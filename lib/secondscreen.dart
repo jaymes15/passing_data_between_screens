@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
 
-class secondscreen extends StatelessWidget{
+class secondscreen extends StatefulWidget{
   String value;
-  secondscreen({this.value});
+  secondscreen({ Key key,@required this.value}) : super(key : key);
   @override
-  Widget build(BuildContext context){
+  _secondscreenState createState() => _secondscreenState(value);
+
+  }
+
+
+class _secondscreenState extends State<secondscreen> {
+  String value;
+
+  _secondscreenState(this.value);
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Screen 2"
+            "Screen 2"
         ),
       ),
       body: Center(
